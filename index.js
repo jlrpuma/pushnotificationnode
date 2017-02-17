@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.static(__dirname + '/public'));
 // respond with "hello world" when a GET request is made to the homepage
-app.get('/', function(req, res) {
+app.post('/', cors() , function(req, res) {
   sendNotification(message);
   //res.send('hello world');
 });
@@ -26,9 +26,6 @@ var message = {
   contents: {"en": "English Message"},
   include_player_ids: ["1030151e-ee73-47e1-aa0b-7644934ee721" , "02ab9340-28ec-466b-8c73-5ebdb723a4b7","322e1e0c-1dae-48e0-bc44-898d3d57af3e"]
 };
-
-
-
 
 var sendNotification = function(data) {
   var headers = {
