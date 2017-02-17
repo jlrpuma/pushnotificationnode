@@ -18,7 +18,7 @@ app.post('/', cors() , function(req, res) {
 
 app.post('/messageToOne/', cors() , function(req, res) {
   console.log(req.body);
-  //sendNotification(req.body.message);
+  sendNotification(req.body);
   //res.send('hello world');
 });
 
