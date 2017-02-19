@@ -10,11 +10,10 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.static(__dirname + '/public'));
-// respond with "hello world" when a GET request is made to the homepage
-app.post('/', cors() , function(req, res) {
+
+/*app.post('/', cors() , function(req, res) {
   sendNotification(message);
-  //res.send('hello world');
-});
+});*/
 
 app.post('/messageToOne/', cors() , function(req, res) {
   console.log(req.body);
